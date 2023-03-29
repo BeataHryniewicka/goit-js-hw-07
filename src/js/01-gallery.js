@@ -7,7 +7,7 @@ const newImages = galleryItems
   .map(
     (image) =>
       //Link do oryginalnego obrazka powinien być przechowywany w atrybucie data source w elemencie <img>, oraz w href linku.
-      `<li class="gallery__item">
+      `<div class="gallery__item">
   <a class="gallery__link" href="${image.original}">
     <img
       class="gallery__image"
@@ -16,17 +16,17 @@ const newImages = galleryItems
       alt="${image.description}"
     />
   </a>
-</li>`
+</div>`
   )
   .join(" ");
 
 galleryArray.insertAdjacentHTML("beforeend", newImages);
 
-// galleryArray.addEventListener("click", (ev) => {
-//   //zablokowanie przekierowania na stronę
-//   ev.preventDefault();
-//   //Otworzenie okna modalnego po kliknięciu w element galerii.
-//   basicLightbox.create(`<img src="${ev.target.dataset.source}  ">`).show();
-// });
+galleryArray.addEventListener("click", (ev) => {
+  //zablokowanie przekierowania na stronę
+  ev.preventDefault();
+  //Otworzenie okna modalnego po kliknięciu w element galerii.
+  basicLightbox.create(`<img src="${ev.target.dataset.source}  ">`).show();
+});
 
 console.log(galleryItems);
