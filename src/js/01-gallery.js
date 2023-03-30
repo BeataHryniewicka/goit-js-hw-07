@@ -7,7 +7,7 @@ const newImages = galleryItems
   .map(
     (image) =>
       //Link do oryginalnego obrazka powinien być przechowywany w atrybucie data source w elemencie <img>, oraz w href linku.
-      `<div class="gallery__item">
+      `<li class="gallery__item">
   <a class="gallery__link" href="${image.original}">
     <img
       class="gallery__image"
@@ -16,7 +16,7 @@ const newImages = galleryItems
       alt="${image.description}"
     />
   </a>
-</div>`
+</li>`
   )
   .join(" ");
 
