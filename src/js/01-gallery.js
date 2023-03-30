@@ -25,8 +25,22 @@ galleryArray.insertAdjacentHTML("beforeend", newImages);
 galleryArray.addEventListener("click", (ev) => {
   //zablokowanie przekierowania na stronę
   ev.preventDefault();
+  // if (nodeName == !"img") {
+  //   return;
+  // }
   //Otworzenie okna modalnego po kliknięciu w element galerii.
-  basicLightbox.create(`<img src="${ev.target.dataset.source}  ">`).show();
+  const instance = basicLightbox.create(
+    `<img src="${ev.target.dataset.source}  ">`
+  );
+  // {
+  //   onShow: (instance) => {
+  //     window.addEventListener("keydown", (ev) => {
+  //       console.log(ev.code);
+  //       if (ev.code === 'Escape')
+  //         instance.close())
+  //   }
+
+  instance.show();
 });
 
 console.log(galleryItems);
