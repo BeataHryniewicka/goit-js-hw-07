@@ -26,5 +26,5 @@ console.log(galleryItems);
 // kliknięcie w obrazki, otwieranie i zamykanie okna modalnego oraz przewijaniem obrazków za pomocą klawiatury.
 const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
-  captionDelay: 200,
+  captionDelay: 250,
 });
