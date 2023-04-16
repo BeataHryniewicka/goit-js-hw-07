@@ -1,6 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
-
+console.log(galleryItems);
 const galleryArray = document.querySelector(`.gallery`);
 
 const newImages = galleryItems
@@ -48,5 +48,3 @@ galleryArray.addEventListener("click", (ev) => {
 
   instance.show();
 });
-
-console.log(galleryItems);
